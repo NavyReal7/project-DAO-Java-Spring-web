@@ -1,0 +1,58 @@
+body{
+    width: 100%;
+    margin: 2% 2% 2%;
+    background-color: darkgray;
+}
+
+a{
+    font-family: fantasy;
+    font-size: x-large;
+    color: antiquewhite;
+    text-decoration: none ;
+    text-shadow: 1px 2px 1px darkolivegreen;
+}
+
+a:hover{
+    color: mediumspringgreen;
+    text-shadow: 7px 7px 7px deeppink;
+    font-style: italic;
+}
+
+.ul{
+    background-color: antiquewhite;
+    list-style-type: none;
+    padding: 6px;
+    border-radius: 3px;
+    margin-right: 50%;
+    min-width: 335px;
+    max-width: 335px;
+    box-shadow: grey 5px 5px 5px ;
+}
+
+.li{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: .5em;
+}
+
+.btn{
+    margin-top: 6px;
+}
+.btn:hover{
+    background-color: deeppink;
+    color: mediumspringgreen;
+}
+
+label:hover{
+    color: deeppink;
+}
+
+input{
+    margin-left: 5px;
+}
+.input:focus{
+    outline:none;
+    border: 2px solid deeppink;
+    box-shadow: inset 1px 1px 4px 1px darkgray;
+}

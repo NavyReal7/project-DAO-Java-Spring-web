@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Информация о пользователе</title>
+
+<head>
+
+   <link th:href="@{/css/User_info.css}" type="text/css" rel="stylesheet">
+
+<!--   <style>-->
+<!--      body{-->
+<!--         width: 100%;-->
+<!--         margin: 5% 5% 5%;-->
+<!--         background-color: darkgray;-->
+<!--         font-family: Georgia;-->
+<!--      }-->
+
+<!--      a{-->
+<!--         font-family: fantasy;-->
+<!--         font-size: x-large;-->
+<!--         margin-right: 6%;-->
+<!--         color: antiquewhite;-->
+<!--         text-decoration: none ;-->
+<!--         text-shadow: 1px 2px 1px darkolivegreen;-->
+<!--      }-->
+
+<!--      a:hover{-->
+<!--         color: mediumspringgreen;-->
+<!--         text-shadow: 7px 7px 7px deeppink;-->
+<!--         font-style: italic;-->
+<!--      }-->
+
+<!--      .p{-->
+<!--         color: black;-->
+<!--         font-size: larger;-->
+<!--         font-style: italic;-->
+<!--      }-->
+<!--   </style>-->
+
+</head>
+
+<body>
+   <p th:text="'пользователь №'+ ${Userr.getId()}"></p>
+   <p th:text="'Фамилия: '+ ${Userr.getFamily_name()}"></p>
+   <p th:text="'Имя: '+ ${Userr.getName()}"></p>
+   <p th:text="'Отчество: '+ ${Userr.getPatronymic()}"></p>
+   <p th:text="'Возраст: '+ ${Userr.getAge()}"></p>
+   <p th:text="'Эл. почта: '+ ${Userr.getEmail()}"></p>
+   <p th:text="'Телефон: '+ ${Userr.getTelephone()}"></p>
+   <br>
+
+   <a th:href="@{/user/edit{id}(id=${Userr.getId()})}">Редактирование данных о пользователе</a>
+   <a th:href="@{/user/delete/{id}(id=${Userr.getId()})}">Удалить данные о пользователе?</a>
+
+</body>
+
+</html>

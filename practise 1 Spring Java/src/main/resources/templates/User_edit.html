@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Добавление пользователя</title>
+
+<head>
+
+  <link th:href="@{/css/User_edit.css}" type="text/css" rel="stylesheet">
+
+<!--  <style>-->
+<!--    body{-->
+<!--      width: 100%;-->
+<!--      margin: 2% 2% 2%;-->
+<!--      background-color: darkgray;-->
+<!--    }-->
+
+<!--    a{-->
+<!--      font-family: fantasy;-->
+<!--      font-size: x-large;-->
+<!--      color: antiquewhite;-->
+<!--      text-decoration: none ;-->
+<!--      text-shadow: 1px 2px 1px darkolivegreen;-->
+<!--    }-->
+
+<!--    a:hover{-->
+<!--      color: mediumspringgreen;-->
+<!--      text-shadow: 7px 7px 7px deeppink;-->
+<!--      font-style: italic;-->
+<!--    }-->
+
+<!--    .ul{-->
+<!--      background-color: antiquewhite;-->
+<!--      list-style-type: none;-->
+<!--      padding: 6px;-->
+<!--      border-radius: 3px;-->
+<!--      margin-right: 50%;-->
+<!--      min-width: 335px;-->
+<!--      max-width: 335px;-->
+<!--      box-shadow: grey 5px 5px 5px ;-->
+<!--    }-->
+
+<!--    .li{-->
+<!--      display: flex;-->
+<!--      justify-content: flex-end;-->
+<!--      flex-wrap: nowrap;-->
+<!--      padding: .5em;-->
+<!--    }-->
+
+<!--    .btn{-->
+<!--      margin-top: 6px;-->
+<!--    }-->
+<!--    .btn:hover{-->
+<!--      background-color: deeppink;-->
+<!--      color: mediumspringgreen;-->
+<!--    }-->
+
+<!--    label:hover{-->
+<!--      color: deeppink;-->
+<!--    }-->
+
+<!--    input{-->
+<!--      margin-left: 5px;-->
+<!--    }-->
+<!--    .input:focus{-->
+<!--      outline:none;-->
+<!--      border: 2px solid deeppink;-->
+<!--      box-shadow: inset 1px 1px 4px 1px darkgray;-->
+<!--    }-->
+<!--  </style>-->
+
+
+</head>
+
+<body>
+<a>Редактирование данных о пользователе</a>
+
+<form th:method= "POST" th:action="@{/user/edit{id}(id=${edit_Userr.getId()})}" th:object="${edit_Userr}">
+  <ul class="ul">
+    <li class = "li">
+      <label for = "family_name">введите фамилию:</label>
+      <input class = "input" type="text" th:field="*{family_name}" id="family_name"><br>
+    </li>
+    <li class = "li">
+      <label for = "name">введите имя:</label>
+      <input class = "input" type="text" th:field="*{name}" id="name"><br>
+    </li>
+    <li class = "li">
+      <label for = "patronymic">введите отчество:</label>
+      <input class = "input" type="text" th:field="*{patronymic}" id="patronymic"><br>
+    </li>
+    <li class = "li">
+      <label for = "age">введите возраст:</label>
+      <input class = "input" type="text" th:field="*{age}" id="age"><br>
+    </li>
+    <li class = "li">
+      <label for = "email">введите эл.почту:</label>
+      <input class = "input" type="text" th:field="*{email}" id="email"><br>
+    </li>
+    <li class = "li">
+      <label for = "telephone">введите телефон:</label>
+      <input class = "input" type="text" th:field="*{telephone}" id="telephone"><br>
+    </li>
+    <li><input class = "btn" type="submit" value = "изменить"></li>
+
+
+  </ul>
+</form>
+
+</body>
+
+</html>

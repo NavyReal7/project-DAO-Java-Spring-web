@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Список пользователей</title>
+
+<head>
+
+    <link th:href="@{/css/User.css}" type="text/css" rel="stylesheet">
+
+<!--    <style>-->
+<!--        body{-->
+<!--            width: 100%;-->
+<!--            margin: 6% auto;-->
+<!--            background-color: darkgray;-->
+<!--            font-family: Georgia;-->
+<!--        }-->
+
+<!--        a{-->
+<!--            font-family: fantasy;-->
+<!--            font-size: x-large;-->
+<!--            margin-left: 5%;-->
+<!--            color: antiquewhite;-->
+<!--            text-decoration: none ;-->
+<!--            text-shadow: 1px 2px 1px darkolivegreen;-->
+<!--        }-->
+
+<!--        a:hover{-->
+<!--            color: mediumspringgreen;-->
+<!--            text-shadow: 7px 7px 7px deeppink;-->
+<!--            font-style: italic;-->
+<!--        }-->
+<!--    </style>-->
+
+</head>
+
+<body>
+
+  <div th:each=" User:${Userr}">
+      <a th:href="@{/User/{id}(id=${User.getId})}" th:text="${User.getFamily_name()}"></a>
+  </div>
+
+<a href="/user/add">Добавьте пользователя</a>
+
+</body>
+
+</html>
